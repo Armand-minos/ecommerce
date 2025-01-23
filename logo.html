@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Savon Artisanal</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .soap-bar {
+            width: 100px;
+            height: 50px;
+            background-color: #e0b0ff;
+            border-radius: 10px;
+            position: relative;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .soap-bar:before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            width: 80px;
+            height: 10px;
+            background-color: #d1a6e0;
+            border-radius: 5px;
+        }
+
+        .soap-bar:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 10px;
+            width: 80px;
+            height: 10px;
+            background-color: #d1a6e0;
+            border-radius: 5px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            color: #4a4a4a;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo" id="logo">
+        <div class="soap-bar"></div>
+        <div class="logo-text">Savon Artisanal</div>
+    </div>
+
+    <script>
+        const logo = document.getElementById('logo');
+
+        logo.addEventListener('mouseover', () => {
+            logo.style.color = '#e74c3c'; 
+        });
+
+        logo.addEventListener('mouseout', () => {
+            logo.style.color = '#4a4a4a'; 
+        });
+    </script>
+
+</body>
+</html>
